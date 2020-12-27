@@ -16,8 +16,41 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>Event Loop <br>Animations</br></section>
+				<section><span style="color: rgb(255, 251, 37);">Event loop</span><br><span style="font-size: 18px"><span style="color: rgb(32, 255, 2);">JavaScript </span>is a single threaded programming language, which means that only one task can be performed at a time. Asynchronous behavior is not part of the language, it is available through browser APIs</span></br></section>
+				<section class="event-loop-picture">Graphical representation<br><img src="img/event-loop.svg" width="400" height="400" style="order: 1;"></br></section>
+				<section><span style="color: cornflowerblue;">Heap</span><br><span style="font-size: 28px;">Objects are allocated in a heap which is just a name to denote a large mostly unstructured region of memory</span><br><span style="color: cornflowerblue;">Stack</span><br><span style="font-size: 28px;">This represents the single thread provided for JavaScript code execution. Function calls form a stack of frames (more on this below)</span><br><span style="color: cornflowerblue;">Queue</span><br><span style="font-size: 28px;">A JavaScript runtime uses a message queue, which is a list of messages to be processed. Each message has an associated function which gets called in order to handle the message.</span></section>
+				<section><pre><code>
+		function main() {
+    		  console.log("A")
+
+    		  setTimeout(function exec() {
+        		console.log("B")
+    		  }, 1000)
+
+    		  console.log("C")
+			}
+
+		main()
+				</code></pre></section>
+				<section>It is logical to assume that there will be "A, C, B" since element B had an interval of one second<br><img src="img/first-example.jpg"></section>
+				<section><pre><code>
+			function main() {
+			  console.log("A")
+			
+			  setTimeout(function exec() {
+			    console.log("B")
+			  }, 0)
+			
+		  	  console.log("C")
+			}
+			
+			main()
+				</code></pre></section>
+
+				<section>Someone might think that if the delay is 0, then everything will be executed in order, but this is not entirely true. The result will be the same as in the previous example.<br><img src="img/first-example.jpg"></section>
+				<section style="width: 1200;"><img src="img/sheme-1.png" alt=""></section>
+				<section><img src="img/sheme-2.png" alt=""></section>
 			</div>
 		</div>
 
@@ -25,6 +58,7 @@
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
 		<script src="plugin/highlight/highlight.js"></script>
+		<script src="js/event-loop-picture.js"></script>
 		<script>
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
