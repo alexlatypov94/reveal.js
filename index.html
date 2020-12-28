@@ -53,7 +53,97 @@
 				<section><img src="img/sheme-2.png" alt=""></section>
 
 				<section>Animations</section>
-				<section>The Element interface's animate() method is a shortcut method which creates a new Animation, applies it to the element, then plays the animation. It returns the created Animation object instance.</section>
+				<section><img src="img/train.gif" alt=""></section>
+				<section><pre><code>let animation = element.animate(keyframes, options);</code></pre></section>
+				<section><pre><code>
+			  element.animate([
+		  	    { // from
+		    		opacity: 0,
+		    		color: "#fff"
+		  	    },
+		  	    { // to
+		    		opacity: 1,
+		    		color: "#000"
+		 	    }
+			  ], 2000);</code></pre></section>
+				<section data-auto-animate style="font-size: 20px;">
+					<h3 style="color: crimson;">Id</h3>
+				</section>
+				<section data-auto-animate style="font-size: 20px;">
+					<h3 style="color: crimson;">Id</h3>
+					<h3 style="color: rgb(220, 127, 20);">delay</h3>
+				</section>
+				<section data-auto-animate style="font-size: 20px;">
+					<h3 style="color: crimson;">Id</h3>
+					<h3  style="color: rgb(220, 127, 20);">delay</h3>
+					<h3  style="color: rgb(220, 217, 20);">direction</h3>
+				</section>
+				<section data-auto-animate style="font-size: 20px;">
+					<h3 style="color: crimson;">Id</h3>
+					<h3  style="color: rgb(220, 127, 20);">delay</h3>
+					<h3 style="color: rgb(220, 217, 20);">direction</h3>
+					<h3 style="color: rgb(83, 220, 20);">duration</h3>
+				</section>
+				<section data-auto-animate style="font-size: 20px;">
+					<h3 style="color: crimson;">Id</h3>
+					<h3 style="color: rgb(220, 127, 20);">delay</h3>
+					<h3 style="color: rgb(220, 217, 20);">direction</h3>
+					<h3 style="color: rgb(83, 220, 20);">duration</h3>
+					<h3 style="color: rgb(20, 220, 210);">easing</h3>
+				</section>
+				<section data-auto-animate style="font-size: 20px;">
+					<h3 style="color: crimson;">Id</h3>
+					<h3 style="color: rgb(220, 127, 20);">delay</h3>
+					<h3 style="color: rgb(220, 217, 20);">direction</h3>
+					<h3 style="color: rgb(83, 220, 20);">duration</h3>
+					<h3 style="color: rgb(20, 220, 210);">easing</h3>
+					<h3 style="color: rgb(11, 24, 207);">endDelay</h3>
+				</section>
+				<section data-auto-animate style="font-size: 20px;">
+					<h3 style="color: crimson;">Id</h3>
+					<h3  style="color: rgb(220, 127, 20);">delay</h3>
+					<h3 style="color: rgb(220, 217, 20);">direction</h3>
+					<h3 style="color: rgb(83, 220, 20);">duration</h3>
+					<h3 style="color: rgb(20, 220, 210);">easing</h3>
+					<h3 style="color: rgb(11, 24, 207);">endDelay</h3>
+					<h3 style="color: rgb(168, 11, 207);">fill</h3>
+				</section>
+				<section data-auto-animate style="font-size: 20px;">
+					<h3 style="color: crimson;">Id</h3>
+					<h3  style="color: rgb(220, 127, 20);">delay</h3>
+					<h3 style="color: rgb(220, 217, 20);">direction</h3>
+					<h3 style="color: rgb(83, 220, 20);">duration</h3>
+					<h3 style="color: rgb(20, 220, 210);">easing</h3>
+					<h3 style="color: rgb(11, 24, 207);">endDelay</h3>
+					<h3 style="color: rgb(168, 11, 207);">fill</h3>
+					<h3 style="color: rgb(207, 11, 132);">iterationStart</h3>
+				</section>
+				<section data-auto-animate style="font-size: 20px;">
+					<h3 style="color: crimson;">Id</h3>
+					<h3 style="color: rgb(220, 127, 20);">delay</h3>
+					<h3 style="color: rgb(220, 217, 20);">direction</h3>
+					<h3 style="color: rgb(83, 220, 20);">duration</h3>
+					<h3 style="color: rgb(20, 220, 210);">easing</h3>
+					<h3 style="color: rgb(11, 24, 207);">endDelay</h3>
+					<h3 style="color: rgb(168, 11, 207);">fill</h3>
+					<h3 style="color: rgb(207, 11, 132);">iterationStart</h3>
+					<h3 style="color: rgb(95, 14, 18);">iterations</h3>
+				</section>
+				<section><pre><code>
+		const train = document.querySelector(".train");
+
+		train.animate([
+    		  { transform: "translateX(0)" },
+    		  { transform: "translateX(200px)" }
+		], {
+    		  duration: 2000,
+    		  iterations: Infinity,
+		});
+				</code></pre>
+			<img src="img/train-end-slide.gif" alt="" width="400">
+			</section>
+			<section><h1 style="color: chartreuse;">thanks for watching</h1></section>
+				
 			</div>
 		</div>
 
